@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    width: 25vw;
+}
+.input,
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .5rem;
+}
+.input-group {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.input label {
+    font-size: smaller;
+}
+.input input {
+    padding: .5rem;
+    border-radius: .2rem;
+    border: 1px solid #ccc;
+}
+.input-group input {
+    flex: 1;
+}
+input[type="submit"] {
+    background-color: #3673f5;
+    flex: 1;
+    padding: .2rem;
+    border-radius: .2rem;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+input:invalid {
+    color: red;
+    border-color: red;
+}
