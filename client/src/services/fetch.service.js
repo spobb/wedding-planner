@@ -9,7 +9,7 @@ export const fetchService = async (url, method = 'GET', body = null, token = nul
             },
         });
 
-        return response;
+        return response.json();
     } catch (err) {
         console.error(err);
     }

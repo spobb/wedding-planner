@@ -7,6 +7,8 @@ import weddingRouter from './routes/wedding.route.js';
 import guestRouter from './routes/guest.route.js';
 import vendorRouter from './routes/vendor.route.js';
 import budgetRouter from './routes/budget.route.js';
+import taskRouter from './routes/task.route.js';
+import authRouter from './routes/auth.route.js';
 
 const app = express();
 
@@ -28,6 +30,9 @@ app.use('/api/weddings', weddingRouter);
 app.use('/api/guests', guestRouter);
 app.use('/api/vendors', vendorRouter);
 app.use('/api/budgets', budgetRouter);
+app.use('/api/tasks', taskRouter);
+
+app.use('/api/auth', authRouter);
 
 
 const port = process.env.PORT || 3000;

@@ -1,6 +1,9 @@
-import { Box, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText, Divider, Typography } from "@mui/material"
+import { Box, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText, Divider, Button } from "@mui/material"
+import { useNavigate } from "react-router-dom";
 
 export function WeddingList({ weddings }) {
+    const navigate = useNavigate();
+
     return (
         <Box width='60vw'>
             {weddings.map((wedding, i) => (
@@ -10,6 +13,7 @@ export function WeddingList({ weddings }) {
                             <span className='bold'>{wedding.name}</span> - <span className='date'>{new Date(wedding.date).toLocaleDateString()}</span>
                         </p>
                         <p className='location'>{wedding.location}</p>
+                        <Button onClick={() => navigate(`/tasks/${wedding._id}`)} >TASKS</Button>
                     </AccordionSummary>
                     <Divider />
                     <AccordionDetails>

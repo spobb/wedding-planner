@@ -1,0 +1,678 @@
+type: collection.insomnia.rest/5.0
+name: MERN Wedding Planner
+meta:
+  id: wrk_4bec43d7dc0741619d722275fbf20c65
+  created: 1747138923588
+  modified: 1747138923588
+collection:
+  - name: Wedding
+    meta:
+      id: fld_7b4c8d9a4e984e9f933542025ff64b47
+      created: 1747140377437
+      modified: 1747140408822
+      sortKey: -1747140377437
+    children:
+      - url: http://localhost:3000/api/weddings
+        name: /weddings
+        meta:
+          id: req_39a5d3ee398345c5b32c344221b6835f
+          created: 1747138944965
+          modified: 1747140397437
+          isPrivate: false
+          sortKey: -1747140387037
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/weddings
+        name: /weddings
+        meta:
+          id: req_d26eb43f54b246c181304eebb9fef2ec
+          created: 1747138975315
+          modified: 1747140398615
+          isPrivate: false
+          sortKey: -1747140386987
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"name": "{% faker 'randomFirstName' %} & {% faker 'randomFirstName' %}",
+            	"date": "{% faker 'randomDateFuture' %}",
+            	"location": "{% faker 'randomCity' %}, {% faker 'randomCountry' %}"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/weddings/:id
+        name: /weddings/:id
+        meta:
+          id: req_c2d13bcf46174883b38cc5e0f78f99aa
+          created: 1747139311882
+          modified: 1747140400708
+          isPrivate: false
+          sortKey: -1747140386962
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 682339f0e04e96031f564d9d
+      - url: http://localhost:3000/api/weddings/:id
+        name: /weddings/:id
+        meta:
+          id: req_5bbf5ccc158444ff8b5ce5492a690396
+          created: 1747139733102
+          modified: 1747140396157
+          isPrivate: false
+          sortKey: -1747140386937
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 682339f0e04e96031f564d9d
+      - url: http://localhost:3000/api/weddings/:id
+        name: /weddings/:id
+        meta:
+          id: req_bddeb66f32484e7986583250c9fd3328
+          created: 1747139735758
+          modified: 1747140395019
+          isPrivate: false
+          sortKey: -1747140386837
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 682339f0e04e96031f564d9d
+      - url: http://localhost:3000/api/weddings/:id/guests
+        name: /weddings/:id/guests
+        meta:
+          id: req_904bd60ce717428cba2da3e83156b9ef
+          created: 1747141687860
+          modified: 1748873155019
+          isPrivate: false
+          sortKey: -1747140386737
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 68233a22e04e96031f564d9f
+      - url: http://localhost:3000/api/weddings/:id/guests
+        name: /weddings/:id/guests
+        meta:
+          id: req_1d1ed30b00dc4f938f5f0e5728d887f9
+          created: 1748865847870
+          modified: 1748867885341
+          isPrivate: false
+          sortKey: -1746978307322.625
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"guestId": "682340fbb71a8c4018261b5b"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+      - url: http://localhost:3000/api/weddings/:id/tasks
+        name: /weddings/:id/tasks
+        meta:
+          id: req_b85c715feda543f8861b87693cc71cd9
+          created: 1748865873900
+          modified: 1748873159824
+          isPrivate: false
+          sortKey: -1746816227908.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 68233a22e04e96031f564d9f
+      - url: http://localhost:3000/api/weddings/:id/tasks
+        name: /weddings/:id/tasks
+        meta:
+          id: req_e62bd8466825400aad463fe24adf8520
+          created: 1748865893219
+          modified: 1748873971987
+          isPrivate: false
+          sortKey: -1746654148493.875
+        method: POST
+        body:
+          mimeType: application/json
+          text: "#"
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 68233a80e04e96031f564da4
+  - name: Guest
+    meta:
+      id: fld_738126c0053545f798debdbda029d0a9
+      created: 1747140414970
+      modified: 1748866663353
+      sortKey: -1747140414970
+    children:
+      - url: http://localhost:3000/api/guests
+        name: /guests
+        meta:
+          id: req_fc661109e12c43ef92b36d369da63526
+          created: 1747140424313
+          modified: 1747140447497
+          isPrivate: false
+          sortKey: -1747140447424
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/guests
+        name: /guests
+        meta:
+          id: req_9afa24c9e38f4eb3bc2168dcd178bab7
+          created: 1747140455523
+          modified: 1747141141683
+          isPrivate: false
+          sortKey: -1747140417230.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"firstName": "{% faker 'randomFirstName' %}",
+            	"lastName": "{% faker 'randomLastName' %}",
+            	"rsvp": {% faker 'randomBoolean' %},
+            	"status": "pending",
+            	"wedding": "68233a22e04e96031f564d9f"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/guests/:id
+        name: /guests/:id
+        meta:
+          id: req_44cd817ab75c4bf38a2ba12c14e3f507
+          created: 1747655442156
+          modified: 1748873201152
+          isPrivate: false
+          sortKey: -1747140417130.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 68234217def23fcc47c8bfde
+      - url: http://localhost:3000/api/guests/:id
+        name: /guests/:id
+        meta:
+          id: req_19dd6ae4177643c6b4a1ced6ee6ed72b
+          created: 1747655463933
+          modified: 1747655473926
+          isPrivate: false
+          sortKey: -1747140402083.75
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+      - url: http://localhost:3000/api/guests/:id
+        name: /guests/:id
+        meta:
+          id: req_9073c606cc8f41dc9b1d7a0626566e58
+          created: 1747655467757
+          modified: 1747655476244
+          isPrivate: false
+          sortKey: -1747140394560.375
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+  - name: Budget
+    meta:
+      id: fld_6138edc8069940ff8875bf072867da0b
+      created: 1747144576343
+      modified: 1747144576343
+      sortKey: -1747140396203.5
+    children:
+      - url: http://localhost:3000/api/budgets
+        name: /budgets
+        meta:
+          id: req_b98c275c44d2429db667ee0de15793cb
+          created: 1747144576346
+          modified: 1747144584745
+          isPrivate: false
+          sortKey: -1747140447424
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/budgets
+        name: /budgets
+        meta:
+          id: req_52321a8764644585afa0b7aced687f95
+          created: 1747144576382
+          modified: 1747144723088
+          isPrivate: false
+          sortKey: -1747140417230.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"amount": "{% faker 'randomPrice' %}",
+            	"wedding": "68233a22e04e96031f564d9f"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/budgets/:id
+        name: /budgets/:id
+        meta:
+          id: req_059e7cb1090f442bb969d73ae5851a49
+          created: 1747655485143
+          modified: 1747655500948
+          isPrivate: false
+          sortKey: -1747140417180.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+      - url: http://localhost:3000/api/budgets/:id
+        name: /budgets/:id
+        meta:
+          id: req_94a488da6d9d40a4ab287f0b74321fe0
+          created: 1747655505023
+          modified: 1747655511860
+          isPrivate: false
+          sortKey: -1747140417155.5
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+      - url: http://localhost:3000/api/budgets/:id
+        name: /budgets/:id
+        meta:
+          id: req_fcb57316b99346b1947fb1a56c03194e
+          created: 1747655507405
+          modified: 1747655509287
+          isPrivate: false
+          sortKey: -1747140417143
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+  - name: Auth
+    meta:
+      id: fld_e1f5cd29484a46c2b1a0094d91faedca
+      created: 1748866669835
+      modified: 1748866669835
+      sortKey: -1748866669835
+    children:
+      - url: http://localhost:3000/api/auth/login
+        name: /auth/login
+        meta:
+          id: req_e912c92f36d645989b2600eae6d6b13c
+          created: 1748866672824
+          modified: 1748866756923
+          isPrivate: false
+          sortKey: -1748866672824
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "admin@example.com",
+            	"password": "password"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/auth/register
+        name: /auth/register
+        meta:
+          id: req_c06b1d4c399c42769885fb8ba5ddcd3c
+          created: 1748867132688
+          modified: 1748867139186
+          isPrivate: false
+          sortKey: -1748255201193
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "admin@example.com",
+            	"password": "password"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/auth/me
+        name: /auth/me
+        meta:
+          id: req_a4dc785d0f554fb1bfd50c6fd24336ee
+          created: 1748867158746
+          modified: 1748867179115
+          isPrivate: false
+          sortKey: -1747949465377.5
+        method: GET
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODNkOTg0MzUzOGMwMzZjNjBiNWI1MmQiLCJpYXQiOjE3NDg4NjcxMzksImV4cCI6MTc0ODg2ODAzOX0.UckfXkuiqPxnUdJIjbizbPTDNNpf2E6wYguC3Tezocg
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tasks
+    meta:
+      id: fld_3294987ad56b4c2c8ef8aee55e60928b
+      created: 1748867436528
+      modified: 1748867436528
+      sortKey: -1748867436528
+    children:
+      - url: http://localhost:3000/api/tasks
+        name: /tasks
+        meta:
+          id: req_238dd0d4a15c40eba18bed45250f3f68
+          created: 1748867439041
+          modified: 1748873139447
+          isPrivate: false
+          sortKey: -1748867439041
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODNkOTg0MzUzOGMwMzZjNjBiNWI1MmQiLCJpYXQiOjE3NDg4NzMxMzMsImV4cCI6MTc0ODkxNjMzM30.1S_uDraQT98mihNEY2UDi1H5_62C5U17yEIu_9-EfCM
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/tasks
+        name: /tasks
+        meta:
+          id: req_4e15fc2a09614aa48cd497003ddfb4b9
+          created: 1748867539022
+          modified: 1748868698420
+          isPrivate: false
+          sortKey: -1748867055932.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"wedding": "68233a22e04e96031f564d9f",
+            	"name": "Réserver le photographe"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODNkOTg0MzUzOGMwMzZjNjBiNWI1MmQiLCJpYXQiOjE3NDg4Njg1ODIsImV4cCI6MTc0ODkxMTc4Mn0.f3R6mt81t4ba7u90qxj3FrKZVLwC8P10EDSKesI_iRY
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/tasks/:id
+        name: /tasks/:id
+        meta:
+          id: req_2d4614fd9c3e465286d9235235911a39
+          created: 1748873557035
+          modified: 1748873610237
+          isPrivate: false
+          sortKey: -1748866864378.25
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODNkOTg0MzUzOGMwMzZjNjBiNWI1MmQiLCJpYXQiOjE3NDg4Njg1ODIsImV4cCI6MTc0ODkxMTc4Mn0.f3R6mt81t4ba7u90qxj3FrKZVLwC8P10EDSKesI_iRY
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 683d9a528a6d22ecc6be7b4d
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6558d8aa998243a6119101eeb0a936bc789dd2e9
+    created: 1747138923594
+    modified: 1747138923594
+environments:
+  name: Base Environment
+  meta:
+    id: env_6558d8aa998243a6119101eeb0a936bc789dd2e9
+    created: 1747138923592
+    modified: 1747138923592
+    isPrivate: false

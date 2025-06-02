@@ -99,6 +99,36 @@ class WeddingController {
             next(err);
         }
     }
+
+    async addTask(req, res, next) {
+        try {
+            const wedding = await Wedding.findById(req.params.id);
+
+            if (!wedding) {
+                return res.status(404).json({ message: 'No wedding with this ID found!' });
+            }
+
+            wedding.taskLists.push(req.body.taskId);
+            await wedding.save();
+
+            return res.status(200).json(wedding);
+        } catch (err) {
+            next(err);
+        }
+    }
+    async getTasks(req, res, next) {
+        try {
+            const wedding = await Wedding.findById(req.params.id).populate('tasks');
+
+            if (!wedding) {
+                return res.status(404).json({ message: 'No wedding with this ID found!' });
+            }
+
+            return res.status(200).json(wedding.tasks);
+        } catch (err) {
+            next(err);
+        }
+    }
 }
 
 export default new WeddingController();

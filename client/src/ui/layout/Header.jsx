@@ -1,6 +1,9 @@
-import { AppBar, Toolbar, Button, Typography } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, Divider } from '@mui/material';
+import { useAuth } from '../../auth/AuthContext';
 
 export function Header() {
+    const { user, logout } = useAuth();
+
     return (
         <AppBar position='sticky'>
             <Toolbar>
@@ -19,6 +22,18 @@ export function Header() {
                 <Button href='/vendors' color='inherit'>
                     Vendors
                 </Button>
+                <Divider sx={{ marginX: '1rem' }} />
+                {!user && <div>
+                    <Button href='/signup' color='inherit'>
+                        Sign up
+                    </Button>
+                    <Button href='/login' color='inherit'>
+                        Log in
+                    </Button>
+                </div>}
+                {user && <Button onClick={logout} color='inherit'>
+                    Log out
+                </Button>}
             </Toolbar>
         </AppBar>
     );

@@ -16,4 +16,8 @@ router.route('/:id/guests')
     .get(WeddingController.getGuests)
     .post(WeddingController.addGuest)
 
+router.route('/:id/tasks')
+    .get(WeddingController.getTasks)
+    .post(WeddingController.addTask)
+
 export default router;

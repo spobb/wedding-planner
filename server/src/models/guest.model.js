@@ -19,7 +19,7 @@ const guestSchema = new mongoose.Schema({
         enum: Object.values(STATUS),
         default: 'pending'
     },
-    wedding: {
+    weddingId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Wedding',
         required: true

@@ -8,6 +8,10 @@ const weddingSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Guest"
     }],
+    tasks: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Task"
+    }],
     vendors: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Vendor"
