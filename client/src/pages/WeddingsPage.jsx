@@ -5,7 +5,7 @@ import './WeddingsPage.css';
 import { WeddingForm } from '../ui/components/WeddingForm';
 import { WeddingList } from '../ui/components/WeddingList';
 
-export const WeddingsPage = () => {
+export function WeddingsPage() {
     const [weddings, setWeddings] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
